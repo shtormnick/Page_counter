@@ -19,5 +19,6 @@ from view_counter import views
 
 urlpatterns = [
     path('index/', include('view_counter.urls')),
+    path('first_page/', include('view_counter.urls')),
     path('admin/', admin.site.urls),
 ]

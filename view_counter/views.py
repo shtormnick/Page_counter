@@ -8,4 +8,6 @@ from view_counter.models import Page
 class PageListView(ListView):
     model = Page
 
-    
+
+def first(request):
+    return HttpResponse('first page')
