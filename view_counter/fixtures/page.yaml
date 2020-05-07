@@ -1,0 +1,15 @@
+- model: view_counter.page
+  pk: 1
+  fields:
+    title: First
+    description: First description
+- model: view_counter.page
+  pk: 2
+  fields:
+    title: Second
+    description: Second description
+- model: view_counter.page
+  pk: 3
+  fields:
+    title: Third
+    description: Third description

@@ -3,6 +3,7 @@ version: '3'
 services:
   db:
     image: postgres
+    command: -c fsync=off -c full_page_writes=off
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
@@ -12,7 +13,7 @@ services:
       
   web:
     build: .
-    command: bash -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000" 
+    command: bash -c "python manage.py migrate && python manage.py loaddata page && python manage.py runserver 0.0.0.0:8000" 
     volumes:
       - .:/code
     ports:

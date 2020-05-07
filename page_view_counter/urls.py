@@ -15,10 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from view_counter import views
 
 urlpatterns = [
-    path('index/', include('view_counter.urls')),
-    path('first_page/', include('view_counter.urls')),
+    path('', include('view_counter.urls')),
     path('admin/', admin.site.urls),
 ]

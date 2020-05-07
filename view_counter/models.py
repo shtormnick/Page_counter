@@ -9,4 +9,13 @@ class Page(models.Model):
     def __str__(self):
         return self.title
 
+class Counter(models.Model):
+    page = models.OneToOneField(
+        Page,
+        on_delete=models.CASCADE,
+        primary_key=True,
+    )
+    count = models.PositiveIntegerField(default=0)
     
+    def __str__(self):
+        return self.page.title
