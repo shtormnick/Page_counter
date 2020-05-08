@@ -7,7 +7,8 @@ class Page(models.Model):
     description = models.CharField(max_length=264, unique=False)
 
     def __str__(self):
-        return self.title
+        page = '{0.title} {0.description}'
+        return page.format(self)
 
 class Counter(models.Model):
     page = models.OneToOneField(

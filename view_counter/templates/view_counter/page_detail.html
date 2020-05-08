@@ -1,11 +1,10 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page</title>
-</head>
-<body>
-    {{ object }}
+{% extends "view_counter/base.html" %}
+{% block container %}
+<div>
+    <h1>{{ object.title }}</h1>
+</div>
+<div>
+    <h2>{{ object.description }}</h2>
+</div>
     {{ object.counter.count }}
-</body>
-</html>
+{% endblock %}
