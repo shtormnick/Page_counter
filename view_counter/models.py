@@ -18,4 +18,4 @@ class Counter(models.Model):
     count = models.PositiveIntegerField(default=0)
     
     def __str__(self):
-        return self.page.title
+        return 'counter for ' + self.page.title
